@@ -1,0 +1,69 @@
+name: Deploy React Vite App to Hostinger
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Setup Node.js (with npm cache)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      # 3. Install dependencies (faster than npm install)
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Build project (sourcemaps disabled in vite.config.js)
+      - name: Build project
+        run: npm run build
+
+      # 5. Verify build output
+      - name: Check build output
+        run: |
+          echo "Build directory contents:"
+          ls -la dist/
+          echo "Checking for index.html..."
+          if [ -f "dist/index.html" ]; then
+            echo "✅ index.html found"
+          else
+            echo "❌ index.html not found"
+            exit 1
+          fi
+
+      # 6. Install lftp (minimal output)
+      - name: Install lftp
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+
+      # 7. FAST FTP deploy (no delete, no full scan)
+      - name: Deploy to Hostinger via FTP
+        env:
+          FTP_HOST: ${{ secrets.FTP_SERVER }}
+          FTP_USER: ${{ secrets.FTP_USERNAME }}
+          FTP_PASS: ${{ secrets.FTP_PASSWORD }}
+          FTP_PORT: ${{ secrets.FTP_PORT }}
+        run: |
+          echo "Starting FTP deployment..."
+          lftp -p $FTP_PORT -u "$FTP_USER","$FTP_PASS" $FTP_HOST <<EOF
+          set ftp:passive-mode on
+          set ftp:ssl-allow no
+          set ftp:ssl-force no
+          set ssl:verify-certificate no
+          set net:max-retries 5
+          set net:timeout 40
+          set mirror:use-pget-n 5
+          mirror -R -v dist/ /public_html/
+          quit
+          EOF
+          echo "Deployment completed!"
