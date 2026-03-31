@@ -4,6 +4,18 @@ import gsap from 'gsap';
 import { ShoppingBag, Heart, Star, ArrowRight, ShieldCheck, Truck, Headphones, Clock, Mail } from 'lucide-react';
 import ProductCard from '../components/shared/ProductCard';
 
+// Import images as modules
+import heroMainImage from '/src/assets/Hero Main Image.png';
+import heroSecondaryImage from '/src/assets/Hero Secondary Image .png';
+import categoryDogs from '/src/assets/Category - Dogs.png';
+import categoryCats from '/src/assets/Category - Cats.png';
+import categoryBirds from '/src/assets/Category - Birds.png';
+import categoryFish from '/src/assets/Category - Fish.png';
+import premiumCollar from '/src/assets/Premium Leather Collar.png';
+import orthopedicBed from '/src/assets/Orthopedic Dog Bed.png';
+import organicCatnip from '/src/assets/Organic Catnip.png';
+import interactiveToy from '/src/assets/Interactive Dog Toy.png';
+
 export default function Home() {
   const containerRef = useRef(null);
 
@@ -79,10 +91,10 @@ export default function Home() {
             {/* Right Images & Badges */}
             <div className="lg:col-span-6 relative aspect-square w-full max-w-[450px] lg:max-w-none max-h-[45vh] lg:max-h-[55vh] mx-auto mt-6 lg:mt-0">
               <div className="hero-img absolute right-0 top-0 w-[85%] h-[90%] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden shadow-2xl shadow-brand/20 border-6 lg:border-8 border-white/50 bg-white z-10">
-                <img src="/src/assets/Hero Main Image.png" alt="Beautiful golden retriever" className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700" />
+                <img src={heroMainImage} alt="Beautiful golden retriever" className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="hero-img absolute left-0 bottom-[5%] w-[45%] h-[40%] rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden shadow-xl border-4 border-white z-20 hidden sm:block">
-                <img src="/src/assets/Hero Secondary Image .png" alt="Cute cat" className="w-full h-full object-cover" />
+                <img src={heroSecondaryImage} alt="Cute cat" className="w-full h-full object-cover" />
               </div>
               <div className="floating-badge float-anim-1 absolute top-[5%] sm:top-[12%] left-0 sm:-left-[5%] z-30 bg-white/90 backdrop-blur-md px-3 sm:px-6 py-2.5 sm:py-4 rounded-xl sm:rounded-2xl shadow-xl shadow-black/5 border border-white">
                 <div className="flex items-center gap-2 sm:gap-4">
@@ -116,10 +128,10 @@ export default function Home() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
             {[
-              { name: 'Dogs', img: '/src/assets/Category - Dogs.png' },
-              { name: 'Cats', img: '/src/assets/Category - Cats.png' },
-              { name: 'Birds', img: '/src/assets/Category - Birds.png' },
-              { name: 'Fish', img: '/src/assets/Category - Fish.png' }
+              { name: 'Dogs', img: categoryDogs },
+              { name: 'Cats', img: categoryCats },
+              { name: 'Birds', img: categoryBirds },
+              { name: 'Fish', img: categoryFish }
             ].map((cat, i) => (
               <Link key={i} to={`/shop?category=${cat.name.toLowerCase()}`} className="group relative rounded-[2rem] overflow-hidden aspect-[4/5] block cursor-pointer bg-secondary/20 isolate shadow-xl shadow-brand/5">
                 <img 
@@ -162,10 +174,10 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
             {[
-              { id: 1, name: "Premium Leather Collar", price: 45.00, rating: "4.9", image: "/src/assets/Premium Leather Collar.png", category: "Dogs" },
-              { id: 2, name: "Orthopedic Memory Foam Bed", price: 120.00, rating: "4.8", image: "/src/assets/Orthopedic Dog Bed.png", category: "Beds" },
-              { id: 3, name: "Organic Salmon Cat Treats", price: 15.50, rating: "4.7", image: "/src/assets/Organic Catnip.png", category: "Cats" },
-              { id: 4, name: "Interactive Puzzle Toy", price: 28.00, rating: "4.9", image: "/src/assets/Interactive Dog Toy.png", category: "Toys" },
+              { id: 1, name: "Premium Leather Collar", price: 45.00, rating: "4.9", image: premiumCollar, category: "Dogs" },
+              { id: 2, name: "Orthopedic Memory Foam Bed", price: 120.00, rating: "4.8", image: orthopedicBed, category: "Beds" },
+              { id: 3, name: "Organic Salmon Cat Treats", price: 15.50, rating: "4.7", image: organicCatnip, category: "Cats" },
+              { id: 4, name: "Interactive Puzzle Toy", price: 28.00, rating: "4.9", image: interactiveToy, category: "Toys" },
             ].map((product) => (
               <ProductCard key={product.id} {...product} />
             ))}
@@ -211,7 +223,7 @@ export default function Home() {
 
       {/* Newsletter */}
       <section className="py-20 lg:py-32 bg-brand relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-full h-full bg-[url('/src/assets/Newsletter Background.png')] opacity-5 bg-center bg-cover mix-blend-overlay"></div>
+        <div className="absolute top-0 right-0 w-full h-full bg-[url('./src/assets/Newsletter Background.png')] opacity-5 bg-center bg-cover mix-blend-overlay"></div>
         <div className="max-w-4xl mx-auto px-4 relative z-10 text-center">
           <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">Join the Pet Club</h2>
           <p className="text-secondary text-lg md:text-xl font-medium mb-10 max-w-2xl mx-auto">
