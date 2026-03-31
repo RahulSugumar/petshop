@@ -11,6 +11,9 @@ import ProductDetail from './pages/ProductDetail';
 import PetAdoption from './pages/PetAdoption';
 import PetDetail from './pages/PetDetail';
 import Contact from './pages/Contact';
+import Shipping from './pages/Shipping';
+import FAQ from './pages/FAQ';
+import Privacy from './pages/Privacy';
 
 function App() {
   return (
@@ -26,6 +29,9 @@ function App() {
           <Route path="/adopt" element={<PetAdoption />} />
           <Route path="/adopt/:id" element={<PetDetail />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/shipping" element={<Shipping />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Routes>
       </main>
       <Footer />
