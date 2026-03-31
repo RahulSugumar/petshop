@@ -1,7 +1,19 @@
 import { Link } from 'react-router-dom';
 import { Heart, Search, Menu, MapPin, Phone } from 'lucide-react';
+import { useState } from 'react';
+import SearchModal from '../shared/SearchModal';
 
 export default function Navbar() {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  const handleCallShop = () => {
+    window.location.href = 'tel:18007384822';
+  };
+
+  const handleLocation = () => {
+    // Open in Google Maps
+    window.open('https://maps.google.com/?q=942+Premium+Pet+Boulevard+Beverly+Hills+CA+90210', '_blank');
+  };
   return (
     <div className="fixed top-0 w-full z-50 transition-all duration-300 pointer-events-none">
       <nav className="w-full bg-white/80 backdrop-blur-xl border-b border-white/50 shadow-sm pointer-events-auto">
@@ -40,25 +52,44 @@ export default function Navbar() {
 
           {/* Actions / Icons */}
           <div className="flex items-center space-x-2 md:space-x-4">
-            <button className="hidden md:flex p-2 text-dark/70 hover:text-accent hover:bg-accent/5 rounded-full transition-all">
+            <button 
+              onClick={() => setIsSearchOpen(true)}
+              className="hidden md:flex p-2 text-dark/70 hover:text-accent hover:bg-accent/5 rounded-full transition-all"
+              title="Search pets and supplies"
+            >
               <Search className="w-5 h-5" strokeWidth={1.5} />
             </button>
             
-            <Link to="/contact" className="hidden md:flex p-2 text-dark/70 hover:text-accent hover:bg-accent/5 rounded-full transition-all">
+            <button 
+              onClick={handleLocation}
+              className="hidden md:flex p-2 text-dark/70 hover:text-accent hover:bg-accent/5 rounded-full transition-all"
+              title="Get directions"
+            >
               <MapPin className="w-5 h-5" strokeWidth={1.5} />
-            </Link>
+            </button>
             
-            <Link to="/contact" className="hidden sm:flex items-center gap-2 px-4 py-2 bg-dark text-white rounded-full font-bold text-xs uppercase tracking-widest hover:bg-accent transition-all shadow-sm">
+            <button 
+              onClick={handleCallShop}
+              className="hidden sm:flex items-center gap-2 px-4 py-2 bg-dark text-white rounded-full font-bold text-xs uppercase tracking-widest hover:bg-accent transition-all shadow-sm"
+              title="Call us now"
+            >
               <Phone className="w-3.5 h-3.5" /> Call Shop
-            </Link>
+            </button>
             
             {/* Mobile Menu Button */}
-            <button className="md:hidden p-2 text-dark/70 hover:text-accent hover:bg-accent/5 rounded-full transition-all">
-              <Menu className="w-6 h-6" strokeWidth={1.5} />
+            <button 
+              onClick={() => setIsSearchOpen(true)}
+              className="md:hidden p-2 text-dark/70 hover:text-accent hover:bg-accent/5 rounded-full transition-all"
+              title="Search"
+            >
+              <Search className="w-6 h-6" strokeWidth={1.5} />
             </button>
           </div>
         </div>
       </nav>
+      
+      {/* Search Modal */}
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </div>
   );
 }

@@ -5,24 +5,24 @@ import PetProfileCard from '../components/shared/PetProfileCard';
 
 const ADOPTION_PETS = [
   // DOGS
-  { id: 'a1', name: 'Max', breed: 'Golden Retriever Mix', age: '2 Years', gender: 'Male', location: 'Downtown Rescue Center', status: 'Available', category: 'Dogs', image: 'https://images.unsplash.com/photo-1552053831-71594a27632d?w=600&q=80' },
-  { id: 'a2', name: 'Bella', breed: 'French Bulldog', age: '1 Year', gender: 'Female', location: 'Eastside Foster', status: 'Urgent', category: 'Dogs', image: 'https://images.unsplash.com/photo-1593134257782-e89567b7718a?w=600&q=80' },
-  { id: 'a3', name: 'Charlie', breed: 'Mixed Terrier', age: '4 Months', gender: 'Male', location: 'City Animal Shelter', status: 'Available', category: 'Dogs', image: 'https://images.unsplash.com/photo-1537151608804-ea2f141471a2?w=600&q=80' },
-  { id: 'a4', name: 'Luna', breed: 'Husky Rescue', age: '3 Years', gender: 'Female', location: 'North Valley Rescue', status: 'Available', category: 'Dogs', image: 'https://images.unsplash.com/photo-1605568420105-ce2bf4db24b6?w=600&q=80' },
+  { id: 'a1', name: 'Max', breed: 'Golden Retriever Mix', age: '2 Years', gender: 'Male', location: 'Downtown Rescue Center', status: 'Available', category: 'Dogs', image: '/src/assets/Max - Golden Retriever Mix.png' },
+  { id: 'a2', name: 'Bella', breed: 'French Bulldog', age: '1 Year', gender: 'Female', location: 'Eastside Foster', status: 'Urgent', category: 'Dogs', image: '/src/assets/Bella - French Bulldog.png' },
+  { id: 'a3', name: 'Charlie', breed: 'Mixed Terrier', age: '4 Months', gender: 'Male', location: 'City Animal Shelter', status: 'Available', category: 'Dogs', image: '/src/assets/Charlie - Mixed Terrier.png' },
+  { id: 'a4', name: 'Luna', breed: 'Husky Rescue', age: '3 Years', gender: 'Female', location: 'North Valley Rescue', status: 'Available', category: 'Dogs', image: '/src/assets/Luna - Husky Rescue.png' },
   // CATS
-  { id: 'a5', name: 'Oliver', breed: 'Domestic Shorthair', age: '3 Months', gender: 'Male', location: 'City Animal Shelter', status: 'Available', category: 'Cats', image: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&q=80' },
-  { id: 'a6', name: 'Leo', breed: 'Maine Coon Mix', age: '2 Years', gender: 'Male', location: 'Downtown Rescue Center', status: 'Urgent', category: 'Cats', image: 'https://images.unsplash.com/photo-1574158622682-e40e69881006?w=600&q=80' },
-  { id: 'a7', name: 'Milo', breed: 'Siamese Cross', age: '1 Year', gender: 'Male', location: 'Eastside Foster', status: 'Available', category: 'Cats', image: 'https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?w=600&q=80' },
-  { id: 'a8', name: 'Chloe', breed: 'Calico', age: '4 Years', gender: 'Female', location: 'North Valley Rescue', status: 'Available', category: 'Cats', image: 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=600&q=80' },
+  { id: 'a5', name: 'Oliver', breed: 'Domestic Shorthair', age: '3 Months', gender: 'Male', location: 'City Animal Shelter', status: 'Available', category: 'Cats', image: '/src/assets/Oliver - Domestic Shorthair.png' },
+  { id: 'a6', name: 'Leo', breed: 'Maine Coon Mix', age: '2 Years', gender: 'Male', location: 'Downtown Rescue Center', status: 'Urgent', category: 'Cats', image: '/src/assets/Leo - Maine Coon Mix.png' },
+  { id: 'a7', name: 'Milo', breed: 'Siamese Cross', age: '1 Year', gender: 'Male', location: 'Eastside Foster', status: 'Available', category: 'Cats', image: '/src/assets/Milo - Siamese Cross.png' },
+  { id: 'a8', name: 'Chloe', breed: 'Calico', age: '4 Years', gender: 'Female', location: 'North Valley Rescue', status: 'Available', category: 'Cats', image: '/src/assets/Chloe - Calico.png' },
   // OTHERS
-  { id: 'a9', name: 'Pip', breed: 'Budgie', age: '6 Months', gender: 'Male', location: 'Avian Sanctuary', status: 'Available', category: 'Birds', image: 'https://images.unsplash.com/photo-1552728089-57105a83040e?w=600&q=80' },
-  { id: 'b2', name: 'Mango', breed: 'Sun Conure', age: '2 Years', gender: 'Female', location: 'City Animal Shelter', status: 'Available', category: 'Birds', image: 'https://images.unsplash.com/photo-1549487702-86cd75baf0f5?w=600&q=80' },
-  { id: 'b3', name: 'Rio', breed: 'Blue Macaw', age: '5 Years', gender: 'Male', location: 'Exotic Rescue', status: 'Available', category: 'Birds', image: 'https://images.unsplash.com/photo-1518925501865-c35d978aada2?w=600&q=80' },
-  { id: 'b4', name: 'Snowy', breed: 'Cockatoo', age: '3 Years', gender: 'Female', location: 'Avian Sanctuary', status: 'Urgent', category: 'Birds', image: 'https://images.unsplash.com/photo-1550853024-fae8cd4be47f?w=600&q=80' },
-  { id: 'a10', name: 'Thumper', breed: 'Holland Lop Rabbit', age: '1 Year', gender: 'Male', location: 'Downtown Rescue Center', status: 'Available', category: 'Small Pets', image: 'https://images.unsplash.com/photo-1585110396000-c9a7edb2ee86?w=600&q=80' },
-  { id: 's2', name: 'Peanut', breed: 'Guinea Pig', age: '1 Year', gender: 'Male', location: 'City Animal Shelter', status: 'Available', category: 'Small Pets', image: 'https://images.unsplash.com/photo-1533038676602-535d496e57aa?w=600&q=80' },
-  { id: 's3', name: 'Daisy', breed: 'Dwarf Hamster', age: '6 Months', gender: 'Female', location: 'Eastside Foster', status: 'Available', category: 'Small Pets', image: 'https://images.unsplash.com/photo-1589255877838-89ceb97607fc?w=600&q=80' },
-  { id: 's4', name: 'Oreo', breed: 'Chinchilla', age: '2 Years', gender: 'Male', location: 'North Valley Rescue', status: 'Available', category: 'Small Pets', image: 'https://images.unsplash.com/photo-1629851722839-5e26ecb4ab02?w=600&q=80' }
+  { id: 'a9', name: 'Pip', breed: 'Budgie', age: '6 Months', gender: 'Male', location: 'Avian Sanctuary', status: 'Available', category: 'Birds', image: '/src/assets/Pip - Budgie.png' },
+  { id: 'b2', name: 'Mango', breed: 'Sun Conure', age: '2 Years', gender: 'Female', location: 'City Animal Shelter', status: 'Available', category: 'Birds', image: '/src/assets/Mango - Sun Conure.png' },
+  { id: 'b3', name: 'Rio', breed: 'Blue Macaw', age: '5 Years', gender: 'Male', location: 'Exotic Rescue', status: 'Available', category: 'Birds', image: '/src/assets/Rio - Blue Macaw.png' },
+  { id: 'b4', name: 'Snowy', breed: 'Cockatoo', age: '3 Years', gender: 'Female', location: 'Avian Sanctuary', status: 'Urgent', category: 'Birds', image: '/src/assets/Snowy - Cockatoo.png' },
+  { id: 'a10', name: 'Thumper', breed: 'Holland Lop Rabbit', age: '1 Year', gender: 'Male', location: 'Downtown Rescue Center', status: 'Available', category: 'Small Pets', image: '/src/assets/Thumper - Holland Lop.png' },
+  { id: 's2', name: 'Peanut', breed: 'Guinea Pig', age: '1 Year', gender: 'Male', location: 'City Animal Shelter', status: 'Available', category: 'Small Pets', image: '/src/assets/Peanut - Guinea Pig.png' },
+  { id: 's3', name: 'Daisy', breed: 'Dwarf Hamster', age: '6 Months', gender: 'Female', location: 'Eastside Foster', status: 'Available', category: 'Small Pets', image: '/src/assets/Daisy - Dwarf Hamster.png' },
+  { id: 's4', name: 'Oreo', breed: 'Chinchilla', age: '2 Years', gender: 'Male', location: 'North Valley Rescue', status: 'Available', category: 'Small Pets', image: '/src/assets/Oreo - Chinchilla.png' }
 ];
 
 const CATEGORIES = ['All Rescues', 'Dogs', 'Cats', 'Birds', 'Small Pets'];

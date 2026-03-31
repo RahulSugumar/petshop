@@ -5,28 +5,28 @@ import ProductCard from '../components/shared/ProductCard';
 
 const DUMMY_SUPPLIES = [
   // DOGS
-  { id: 's1', name: 'Premium Leather Dog Collar', price: 45.00, rating: 4.9, category: 'Dogs', image: 'https://images.unsplash.com/photo-1606915152865-c7e42d7cd5df?w=500&q=80' },
-  { id: 's2', name: 'Organic Grain-Free Salmon Kibble', price: 89.99, rating: 4.9, category: 'Dogs', image: 'https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=500&q=80' },
-  { id: 's3', name: 'Orthopedic Memory Foam Bed', price: 120.00, rating: 4.8, category: 'Dogs', image: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=500&q=80' },
-  { id: 's4', name: 'Interactive Puzzle Toy', price: 28.00, rating: 4.9, category: 'Dogs', image: 'https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=500&q=80' },
+  { id: 's1', name: 'Premium Leather Dog Collar', price: 45.00, rating: 4.9, category: 'Dogs', image: '/src/assets/Premium Leather Collar.png' },
+  { id: 's2', name: 'Organic Grain-Free Salmon Kibble', price: 89.99, rating: 4.9, category: 'Dogs', image: '/src/assets/Organic Dog Food.png' },
+  { id: 's3', name: 'Orthopedic Memory Foam Bed', price: 120.00, rating: 4.8, category: 'Dogs', image: '/src/assets/Orthopedic Dog Bed.png' },
+  { id: 's4', name: 'Interactive Puzzle Toy', price: 28.00, rating: 4.9, category: 'Dogs', image: '/src/assets/Interactive Dog Toy.png' },
   
   // CATS
-  { id: 's5', name: 'Luxury Cat Tree Tower', price: 289.00, rating: 4.8, category: 'Cats', image: 'https://images.unsplash.com/photo-1545249390-6bdfa286032f?w=500&q=80' },
-  { id: 's6', name: 'Freeze-Dried Chicken Minnows', price: 34.50, rating: 4.9, category: 'Cats', image: 'https://images.unsplash.com/photo-1583337260934-24e54cd8c24f?w=500&q=80' },
-  { id: 's7', name: 'Ceramic Drinking Fountain', price: 65.00, rating: 4.8, category: 'Cats', image: 'https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=500&q=80' },
-  { id: 's8', name: 'Organic Silvervine Catnip Blend', price: 18.00, rating: 4.7, category: 'Cats', image: 'https://images.unsplash.com/photo-1623366302587-bca94921471d?w=500&q=80' },
+  { id: 's5', name: 'Luxury Cat Tree Tower', price: 289.00, rating: 4.8, category: 'Cats', image: '/src/assets/Luxury Cat Tree.png' },
+  { id: 's6', name: 'Freeze-Dried Chicken Minnows', price: 34.50, rating: 4.9, category: 'Cats', image: '/src/assets/Freeze-Dried Cat Treats.png' },
+  { id: 's7', name: 'Ceramic Drinking Fountain', price: 65.00, rating: 4.8, category: 'Cats', image: '/src/assets/Ceramic Cat Fountain.png' },
+  { id: 's8', name: 'Organic Silvervine Catnip Blend', price: 18.00, rating: 4.7, category: 'Cats', image: '/src/assets/Organic Catnip.png' },
 
   // BIRDS
-  { id: 's9', name: 'Interactive Bird Playground', price: 42.50, rating: 4.5, category: 'Birds', image: 'https://images.unsplash.com/photo-1522858547137-f1dcec554f55?w=500&q=80' },
-  { id: 's10', name: 'Premium Seed & Nut Mix', price: 22.00, rating: 4.8, category: 'Birds', image: 'https://images.unsplash.com/photo-1552728089-57105a83040e?w=500&q=80' },
-  { id: 's11', name: 'Natural Wood Perch Branch', price: 15.00, rating: 4.6, category: 'Birds', image: 'https://images.unsplash.com/photo-1452570053594-1b985d6ea890?w=500&q=80' },
-  { id: 's12', name: 'Foraging Wheel Puzzle Toy', price: 24.50, rating: 4.9, category: 'Birds', image: 'https://images.unsplash.com/photo-1605051670982-fbb97b2d56a0?w=500&q=80' },
+  { id: 's9', name: 'Interactive Bird Playground', price: 42.50, rating: 4.5, category: 'Birds', image: '/src/assets/Bird Playground.png' },
+  { id: 's10', name: 'Premium Seed & Nut Mix', price: 22.00, rating: 4.8, category: 'Birds', image: '/src/assets/Premium Bird Food.png' },
+  { id: 's11', name: 'Natural Wood Perch Branch', price: 15.00, rating: 4.6, category: 'Birds', image: '/src/assets/Natural Wood Perch.png' },
+  { id: 's12', name: 'Foraging Wheel Puzzle Toy', price: 24.50, rating: 4.9, category: 'Birds', image: '/src/assets/Foraging Wheel Toy.png' },
 
   // FISH
-  { id: 's13', name: 'Advanced Aquarium Filter', price: 134.20, rating: 4.6, category: 'Fish', image: 'https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=500&q=80' },
-  { id: 's14', name: 'LED Plant Growth Spectrum Light', price: 89.99, rating: 4.8, category: 'Fish', image: 'https://images.unsplash.com/photo-1524704796725-9fc3044a58b2?w=500&q=80' },
-  { id: 's15', name: 'Exotic Driftwood Centerpiece', price: 45.00, rating: 4.9, category: 'Fish', image: 'https://images.unsplash.com/photo-1520302630592-fac0f0c05bea?w=500&q=80' },
-  { id: 's16', name: 'Premium Micro Wafer Nutrition', price: 12.50, rating: 4.7, category: 'Fish', image: 'https://images.unsplash.com/photo-1534043464124-3be32fe000c9?w=500&q=80' },
+  { id: 's13', name: 'Advanced Aquarium Filter', price: 134.20, rating: 4.6, category: 'Fish', image: '/src/assets/Aquarium Filter.png' },
+  { id: 's14', name: 'LED Plant Growth Spectrum Light', price: 89.99, rating: 4.8, category: 'Fish', image: '/src/assets/LED Aquarium Light.png' },
+  { id: 's15', name: 'Exotic Driftwood Centerpiece', price: 45.00, rating: 4.9, category: 'Fish', image: '/src/assets/Driftwood Centerpiece.png' },
+  { id: 's16', name: 'Premium Micro Wafer Nutrition', price: 12.50, rating: 4.7, category: 'Fish', image: '/src/assets/Premium Fish Food.png' },
 ];
 
 const CATEGORIES = ['All Supplies', 'Dogs', 'Cats', 'Birds', 'Fish'];

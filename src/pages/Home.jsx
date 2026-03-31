@@ -79,10 +79,10 @@ export default function Home() {
             {/* Right Images & Badges */}
             <div className="lg:col-span-6 relative aspect-square w-full max-w-[450px] lg:max-w-none max-h-[45vh] lg:max-h-[55vh] mx-auto mt-6 lg:mt-0">
               <div className="hero-img absolute right-0 top-0 w-[85%] h-[90%] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden shadow-2xl shadow-brand/20 border-6 lg:border-8 border-white/50 bg-white z-10">
-                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=1000&auto=format&fit=crop" alt="Beautiful golden retriever" className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700" />
+                <img src="/src/assets/Hero Main Image.png" alt="Beautiful golden retriever" className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="hero-img absolute left-0 bottom-[5%] w-[45%] h-[40%] rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden shadow-xl border-4 border-white z-20 hidden sm:block">
-                <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=600&auto=format&fit=crop" alt="Cute cat" className="w-full h-full object-cover" />
+                <img src="/src/assets/Hero Secondary Image .png" alt="Cute cat" className="w-full h-full object-cover" />
               </div>
               <div className="floating-badge float-anim-1 absolute top-[5%] sm:top-[12%] left-0 sm:-left-[5%] z-30 bg-white/90 backdrop-blur-md px-3 sm:px-6 py-2.5 sm:py-4 rounded-xl sm:rounded-2xl shadow-xl shadow-black/5 border border-white">
                 <div className="flex items-center gap-2 sm:gap-4">
@@ -116,10 +116,10 @@ export default function Home() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
             {[
-              { name: 'Dogs', img: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&q=80' },
-              { name: 'Cats', img: 'https://images.unsplash.com/photo-1543852786-1cf6624b9987?w=600&q=80' },
-              { name: 'Birds', img: 'https://images.unsplash.com/photo-1452570053594-1b985d6ea890?w=600&q=80' },
-              { name: 'Fish', img: 'https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=600&q=80' }
+              { name: 'Dogs', img: '/src/assets/Category - Dogs.png' },
+              { name: 'Cats', img: '/src/assets/Category - Cats.png' },
+              { name: 'Birds', img: '/src/assets/Category - Birds.png' },
+              { name: 'Fish', img: '/src/assets/Category - Fish.png' }
             ].map((cat, i) => (
               <Link key={i} to={`/shop?category=${cat.name.toLowerCase()}`} className="group relative rounded-[2rem] overflow-hidden aspect-[4/5] block cursor-pointer bg-secondary/20 isolate shadow-xl shadow-brand/5">
                 <img 
@@ -162,10 +162,10 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
             {[
-              { id: 1, name: "Premium Leather Collar", price: 45.00, rating: "4.9", image: "https://images.unsplash.com/photo-1606915152865-c7e42d7cd5df?w=500&q=80", category: "Dogs" },
-              { id: 2, name: "Orthopedic Memory Foam Bed", price: 120.00, rating: "4.8", image: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=500&q=80", category: "Beds" },
-              { id: 3, name: "Organic Salmon Cat Treats", price: 15.50, rating: "4.7", image: "https://images.unsplash.com/photo-1623366302587-bca94921471d?w=500&q=80", category: "Cats" },
-              { id: 4, name: "Interactive Puzzle Toy", price: 28.00, rating: "4.9", image: "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=500&q=80", category: "Toys" },
+              { id: 1, name: "Premium Leather Collar", price: 45.00, rating: "4.9", image: "/src/assets/Premium Leather Collar.png", category: "Dogs" },
+              { id: 2, name: "Orthopedic Memory Foam Bed", price: 120.00, rating: "4.8", image: "/src/assets/Orthopedic Dog Bed.png", category: "Beds" },
+              { id: 3, name: "Organic Salmon Cat Treats", price: 15.50, rating: "4.7", image: "/src/assets/Organic Catnip.png", category: "Cats" },
+              { id: 4, name: "Interactive Puzzle Toy", price: 28.00, rating: "4.9", image: "/src/assets/Interactive Dog Toy.png", category: "Toys" },
             ].map((product) => (
               <ProductCard key={product.id} {...product} />
             ))}
@@ -211,7 +211,7 @@ export default function Home() {
 
       {/* Newsletter */}
       <section className="py-20 lg:py-32 bg-brand relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=2000&auto=format&fit=crop')] opacity-5 bg-center bg-cover mix-blend-overlay"></div>
+        <div className="absolute top-0 right-0 w-full h-full bg-[url('/src/assets/Newsletter Background.png')] opacity-5 bg-center bg-cover mix-blend-overlay"></div>
         <div className="max-w-4xl mx-auto px-4 relative z-10 text-center">
           <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">Join the Pet Club</h2>
           <p className="text-secondary text-lg md:text-xl font-medium mb-10 max-w-2xl mx-auto">

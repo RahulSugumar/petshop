@@ -41,9 +41,15 @@ export default function Contact() {
             <div className="space-y-8">
               <div className="flex items-start gap-4">
                 <div className="bg-brand/10 p-4 rounded-2xl shrink-0"><MapPin className="w-6 h-6 text-brand" /></div>
-                <div>
+                <div className="flex-1">
                   <h3 className="font-bold text-dark text-lg mb-1">Store Location</h3>
-                  <p className="text-dark/70 font-medium">942 Premium Pet Boulevard<br/>Beverly Hills, CA 90210</p>
+                  <p className="text-dark/70 font-medium mb-3">942 Premium Pet Boulevard<br/>Beverly Hills, CA 90210</p>
+                  <button 
+                    onClick={() => window.open('https://maps.google.com/?q=942+Premium+Pet+Boulevard+Beverly+Hills+CA+90210', '_blank')}
+                    className="bg-brand text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-dark transition-colors"
+                  >
+                    Get Directions
+                  </button>
                 </div>
               </div>
 
@@ -70,12 +76,22 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Hero Image */}
+          {/* Interactive Map */}
           <div className="relative aspect-square md:aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl shadow-brand/10 contact-anim isolate">
-            <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=1000&q=80" alt="PetHub physical boutique store interior" className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-1000" />
-            <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent z-10"></div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.7333846298!2d-118.4006!3d34.0736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc04d6153b1b%3A0x6d90f2b2e0c0d3a!2sBeverly%20Hills%2C%20CA%2090210!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full"
+              title="PetHub Store Location"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/20 to-transparent z-10 pointer-events-none"></div>
             
-            <div className="absolute bottom-8 left-8 z-20 pr-8">
+            <div className="absolute bottom-8 left-8 z-20 pr-8 pointer-events-none">
               <div className="bg-white/90 backdrop-blur-md px-4 py-2 rounded-full inline-flex items-center gap-2 shadow-lg mb-4">
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
                 <span className="text-xs font-bold uppercase tracking-widest text-dark">Currently Open</span>

@@ -5,28 +5,28 @@ import PetProfileCard from '../components/shared/PetProfileCard';
 
 const SALE_PETS = [
   // DOGS
-  { id: 'p1', name: 'Bella', breed: 'Golden Retriever', age: '8 Weeks', gender: 'Female', location: 'In Store', image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=500&q=80', status: 'Available', price: 2500, category: 'Dogs' },
-  { id: 'p2', name: 'Max', breed: 'French Bulldog', age: '10 Weeks', gender: 'Male', location: 'In Store', image: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=500&q=80', status: 'Available', price: 4200, category: 'Dogs' },
-  { id: 'p3', name: 'Luna', breed: 'Siberian Husky', age: '9 Weeks', gender: 'Female', location: 'In Store', image: 'https://images.unsplash.com/photo-1605568420105-062e73ce6583?w=500&q=80', status: 'Reserved', price: 1800, category: 'Dogs' },
-  { id: 'p4', name: 'Charlie', breed: 'Corgi', age: '12 Weeks', gender: 'Male', location: 'In Store', image: 'https://images.unsplash.com/photo-1615598150499-1bd5fa6fbac9?w=500&q=80', status: 'Available', price: 3000, category: 'Dogs' },
+  { id: 'p1', name: 'Bella', breed: 'Golden Retriever', age: '8 Weeks', gender: 'Female', location: 'In Store', image: '/src/assets/Bella.png', status: 'Available', price: 2500, category: 'Dogs' },
+  { id: 'p2', name: 'Max', breed: 'French Bulldog', age: '10 Weeks', gender: 'Male', location: 'In Store', image: '/src/assets/Max.png', status: 'Available', price: 4200, category: 'Dogs' },
+  { id: 'p3', name: 'Luna', breed: 'Siberian Husky', age: '9 Weeks', gender: 'Female', location: 'In Store', image: '/src/assets/Luna.png', status: 'Reserved', price: 1800, category: 'Dogs' },
+  { id: 'p4', name: 'Charlie', breed: 'Corgi', age: '12 Weeks', gender: 'Male', location: 'In Store', image: '/src/assets/Charlie.png', status: 'Available', price: 3000, category: 'Dogs' },
   
   // CATS
-  { id: 'p5', name: 'Leo', breed: 'Maine Coon', age: '14 Weeks', gender: 'Male', location: 'In Store', image: 'https://images.unsplash.com/photo-1543852786-1cf6624b9987?w=500&q=80', status: 'Available', price: 1500, category: 'Cats' },
-  { id: 'p6', name: 'Milo', breed: 'British Shorthair', age: '10 Weeks', gender: 'Male', location: 'In Store', image: 'https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=500&q=80', status: 'Available', price: 2100, category: 'Cats' },
-  { id: 'p7', name: 'Chloe', breed: 'Persian', age: '12 Weeks', gender: 'Female', location: 'In Store', image: 'https://images.unsplash.com/photo-1596767789417-eb7d7920ab0f?w=500&q=80', status: 'Available', price: 1800, category: 'Cats' },
-  { id: 'p8', name: 'Oliver', breed: 'Sphynx', age: '16 Weeks', gender: 'Male', location: 'In Store', image: 'https://images.unsplash.com/photo-1513245543132-31f507417b26?w=500&q=80', status: 'Available', price: 2800, category: 'Cats' },
+  { id: 'p5', name: 'Leo', breed: 'Maine Coon', age: '14 Weeks', gender: 'Male', location: 'In Store', image: '/src/assets/Leo.png', status: 'Available', price: 1500, category: 'Cats' },
+  { id: 'p6', name: 'Milo', breed: 'British Shorthair', age: '10 Weeks', gender: 'Male', location: 'In Store', image: '/src/assets/Milo.png', status: 'Available', price: 2100, category: 'Cats' },
+  { id: 'p7', name: 'Chloe', breed: 'Persian', age: '12 Weeks', gender: 'Female', location: 'In Store', image: '/src/assets/Chloe.png', status: 'Available', price: 1800, category: 'Cats' },
+  { id: 'p8', name: 'Oliver', breed: 'Sphynx', age: '16 Weeks', gender: 'Male', location: 'In Store', image: '/src/assets/Oliver.png', status: 'Available', price: 2800, category: 'Cats' },
 
   // BIRDS
-  { id: 'p9', name: 'Koko', breed: 'African Grey', age: '1 Year', gender: 'Male', location: 'In Store', image: 'https://images.unsplash.com/photo-1522858547137-f1dcec554f55?w=500&q=80', status: 'Available', price: 4500, category: 'Birds' },
-  { id: 'p10', name: 'Rio', breed: 'Macaw', age: '8 Months', gender: 'Male', location: 'In Store', image: 'https://images.unsplash.com/photo-1552728089-57105a83040e?w=500&q=80', status: 'Available', price: 6000, category: 'Birds' },
-  { id: 'p11', name: 'Sunny', breed: 'Cockatoo', age: '6 Months', gender: 'Female', location: 'In Store', image: 'https://images.unsplash.com/photo-1452570053594-1b985d6ea890?w=500&q=80', status: 'Available', price: 3200, category: 'Birds' },
-  { id: 'p12', name: 'Kiwi', breed: 'Sun Conure', age: '4 Months', gender: 'Female', location: 'In Store', image: 'https://images.unsplash.com/photo-1583337260934-24e54cd8c24f?w=500&q=80', status: 'Reserved', price: 850, category: 'Birds' },
+  { id: 'p9', name: 'Koko', breed: 'African Grey', age: '1 Year', gender: 'Male', location: 'In Store', image: '/src/assets/Koko.png', status: 'Available', price: 4500, category: 'Birds' },
+  { id: 'p10', name: 'Rio', breed: 'Macaw', age: '8 Months', gender: 'Male', location: 'In Store', image: '/src/assets/Rio.png', status: 'Available', price: 6000, category: 'Birds' },
+  { id: 'p11', name: 'Sunny', breed: 'Cockatoo', age: '6 Months', gender: 'Female', location: 'In Store', image: '/src/assets/Sunny.png', status: 'Available', price: 3200, category: 'Birds' },
+  { id: 'p12', name: 'Kiwi', breed: 'Sun Conure', age: '4 Months', gender: 'Female', location: 'In Store', image: '/src/assets/Kiwi.png', status: 'Reserved', price: 850, category: 'Birds' },
 
   // SMALL PETS
-  { id: 'p13', name: 'Thumper', breed: 'Holland Lop', age: '10 Weeks', gender: 'Male', location: 'In Store', image: 'https://images.unsplash.com/photo-1585110396000-c9fd4e4e5088?w=500&q=80', status: 'Available', price: 250, category: 'Small Pets' },
-  { id: 'p14', name: 'Peanut', breed: 'Guinea Pig', age: '8 Weeks', gender: 'Male', location: 'In Store', image: 'https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=500&q=80', status: 'Available', price: 80, category: 'Small Pets' },
-  { id: 'p15', name: 'Pip', breed: 'Dwarf Hamster', age: '6 Weeks', gender: 'Female', location: 'In Store', image: 'https://images.unsplash.com/photo-1425082661705-1834bfd08dca?w=500&q=80', status: 'Available', price: 45, category: 'Small Pets' },
-  { id: 'p16', name: 'Dusty', breed: 'Chinchilla', age: '4 Months', gender: 'Male', location: 'In Store', image: 'https://images.unsplash.com/photo-1549479366-fbb978cb5cf9?w=500&q=80', status: 'Reserved', price: 350, category: 'Small Pets' },
+  { id: 'p13', name: 'Thumper', breed: 'Holland Lop', age: '10 Weeks', gender: 'Male', location: 'In Store', image: '/src/assets/Thumper.png', status: 'Available', price: 250, category: 'Small Pets' },
+  { id: 'p14', name: 'Peanut', breed: 'Guinea Pig', age: '8 Weeks', gender: 'Male', location: 'In Store', image: '/src/assets/Peanut.png', status: 'Available', price: 80, category: 'Small Pets' },
+  { id: 'p15', name: 'Pip', breed: 'Dwarf Hamster', age: '6 Weeks', gender: 'Female', location: 'In Store', image: '/src/assets/Pip.png', status: 'Available', price: 45, category: 'Small Pets' },
+  { id: 'p16', name: 'Dusty', breed: 'Chinchilla', age: '4 Months', gender: 'Male', location: 'In Store', image: '/src/assets/Dusty.png', status: 'Reserved', price: 350, category: 'Small Pets' },
 ];
 
 const CATEGORIES = ['All Pets', 'Dogs', 'Cats', 'Birds', 'Small Pets'];
