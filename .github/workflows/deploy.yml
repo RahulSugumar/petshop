@@ -18,12 +18,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: '22' # Updated to meet package requirements
           cache: npm
 
-      # 3. Install dependencies (faster than npm install)
+      # 3. Install dependencies (using npm install to sync lock file)
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       # 4. Build project (sourcemaps disabled in vite.config.js)
       - name: Build project
