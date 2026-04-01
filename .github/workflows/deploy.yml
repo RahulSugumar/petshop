@@ -76,6 +76,8 @@ jobs:
           set net:max-retries 5
           set net:timeout 40
           set mirror:use-pget-n 5
+          # Clean and deploy fresh
+          rm -rf /public_html/*
           mirror -R -v dist/ /public_html/
           quit
           EOF
